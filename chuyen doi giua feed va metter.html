@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="nhapFoot">nhap so foot: </label>
+<input id="nhapFoot">
+<br>
+<br>
+<button onclick="footToMeter()" >check Foot To Meter</button>
+<br>
+<br>
+<label for="nhapMeter">nhap Meter: </label>
+<input id="nhapMeter">
+<br>
+<br>
+<button onclick="meterToFoot()">check Meter To Foot</button>
+
+<p id = "result" ></p>
+<p id = "result2" ></p>
+<script>
+    function footToMeter(foot){
+        foot = document.getElementById("nhapFoot").value;
+        let meter = 0.305 * foot;
+        document.getElementById("result").innerText = foot + " buoc se bang : "+ meter + " meter";
+    }
+    function meterToFoot(meter){
+        meter = document.getElementById("nhapMeter").value;
+        let foot = 3.279 * meter;
+        document.getElementById("result2").innerText = meter + " meter bang : "+foot +" foot";
+    }
+
+</script>
+</body>
+</html>
